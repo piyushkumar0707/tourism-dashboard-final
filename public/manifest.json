@@ -1,0 +1,7 @@
+{
+  "name": "Guardian Eagle Dashboard",
+  "short_name": "Dashboard",
+  "start_url": ".",
+  "display": "standalone"
+  // PWA configuration
+}
