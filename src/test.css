@@ -1,0 +1,4 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.test-bg { @apply bg-blue-500 text-white p-4; }

@@ -16,7 +16,7 @@ export const useWebSocket = (url, options = {}) => {
     shouldReconnect = true
   } = options;
 
-  const [socket, setSocket] = useState(null);
+  // Removed unused socket state
   const [lastMessage, setLastMessage] = useState(null);
   const [readyState, setReadyState] = useState(null);
   const reconnectAttemptsRef = useRef(0);
@@ -41,7 +41,7 @@ export const useWebSocket = (url, options = {}) => {
 
       const ws = new WebSocket(url);
       socketRef.current = ws;
-      setSocket(ws);
+    // setSocket(ws); // Removed: setSocket is not defined or used
 
       ws.onopen = (event) => {
         setReadyState(WebSocket.OPEN);

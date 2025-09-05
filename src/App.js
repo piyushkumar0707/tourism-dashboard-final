@@ -1,10 +1,12 @@
 // Main application with routing
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import TouristDashboard from './components/TouristDashboard';
-import AuthorityDashboard from './components/AuthorityDashboard';
-import LoginPage from './components/LoginPage';
+import TouristDashboardEnhanced from './components/TouristDashboardEnhanced';
+import AuthorityDashboardEnhanced from './components/AuthorityDashboardEnhanced';
+import LoginPageSimple from './components/LoginPageSimple';
+import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
+import './styles.css';
 
 function App() {
   // Simple authentication state - in production, use proper auth
@@ -19,9 +21,10 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="App">
-        <Routes>
+    <ThemeProvider>
+      <Router>
+        <div className="App">
+          <Routes>
           {/* Login Route */}
           <Route 
             path="/login" 
@@ -29,7 +32,7 @@ function App() {
               user ? (
                 <Navigate to={user.type === 'tourist' ? '/tourist' : '/authority'} />
               ) : (
-                <LoginPage onLogin={handleLogin} />
+                <LoginPageSimple onLogin={handleLogin} />
               )
             } 
           />
@@ -39,14 +42,14 @@ function App() {
             path="/tourist" 
             element={
               user?.type === 'tourist' ? (
-                <TouristDashboard 
+                <TouristDashboardEnhanced 
                   touristId={user.id} 
                   onLogout={handleLogout}
                 />
               ) : (
                 <Navigate to="/login" />
               )
-            } 
+            }
           />
           
           {/* Authority Dashboard Route */}
@@ -54,11 +57,11 @@ function App() {
             path="/authority" 
             element={
               user?.type === 'authority' ? (
-                <AuthorityDashboard onLogout={handleLogout} />
+                <AuthorityDashboardEnhanced onLogout={handleLogout} />
               ) : (
                 <Navigate to="/login" />
               )
-            } 
+            }
           />
           
           {/* Default Route */}
@@ -72,9 +75,10 @@ function App() {
               )
             } 
           />
-        </Routes>
-      </div>
-    </Router>
+          </Routes>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

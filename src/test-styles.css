@@ -1,0 +1,74 @@
+/* Test styles to verify CSS loading */
+
+.test-red {
+  background-color: red !important;
+  color: white !important;
+  padding: 1rem !important;
+  font-weight: bold !important;
+  border: 2px solid black !important;
+  margin: 1rem !important;
+}
+
+.test-blue {
+  background-color: blue !important;
+  color: white !important;
+  padding: 1rem !important;
+  font-weight: bold !important;
+  border: 2px solid yellow !important;
+  margin: 1rem !important;
+}
+
+/* Tailwind test classes */
+.bg-red-500 {
+  background-color: #ef4444 !important;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6 !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.p-4 {
+  padding: 1rem !important;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.min-h-screen {
+  min-height: 100vh !important;
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)) !important;
+}
+
+.from-blue-500 {
+  --tw-gradient-from: #3b82f6 !important;
+  --tw-gradient-to: rgba(59, 130, 246, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-purple-600 {
+  --tw-gradient-to: #9333ea !important;
+}

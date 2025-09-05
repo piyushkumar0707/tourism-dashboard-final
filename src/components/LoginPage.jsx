@@ -15,6 +15,10 @@ const LoginPage = ({ onLogin }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center px-4">
+      {/* Test div to verify CSS is working */}
+      <div className="test-red" style={{position: 'absolute', top: '10px', left: '10px', zIndex: 9999}}>
+        CSS TEST - If you see this red box, CSS is working!
+      </div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-xl p-8">
         {/* Logo and Title */}
         <div className="text-center mb-8">
