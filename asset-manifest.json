@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tourism-dashboard-final/static/css/main.20c0268d.css",
-    "main.js": "/tourism-dashboard-final/static/js/main.d33cca83.js",
+    "main.js": "/tourism-dashboard-final/static/js/main.99db2a44.js",
     "index.html": "/tourism-dashboard-final/index.html",
     "main.20c0268d.css.map": "/tourism-dashboard-final/static/css/main.20c0268d.css.map",
-    "main.d33cca83.js.map": "/tourism-dashboard-final/static/js/main.d33cca83.js.map"
+    "main.99db2a44.js.map": "/tourism-dashboard-final/static/js/main.99db2a44.js.map"
   },
   "entrypoints": [
     "static/css/main.20c0268d.css",
-    "static/js/main.d33cca83.js"
+    "static/js/main.99db2a44.js"
   ]
 }
